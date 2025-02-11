@@ -16,31 +16,7 @@ $('document').ready(function(){
 			$('#b77').animate({top:240, left: vw+250},500);
 		});
 
-		  // "Eng mazali tort" tugmasi bosilganda rasm ortadan chiqishi va 10 sekundan keyin yoʻq boʻlishi
-		  $('#cake_fadein').click(function(){
-			$(this).fadeOut('slow').promise().done(function(){
-				var cake = $('<img>', {
-					src: 'cake128.png',
-					alt: 'Mazali tort',
-					class: 'cake-image'
-				}).hide().css({
-					position: 'fixed',
-					left: '50%',
-					top: '100%',
-					transform: 'translate(-50%, 0%)',
-					width: '200px',
-					height: 'auto',
-					zIndex: 9999
-				}).appendTo('body').animate({top: '60%'}, 1000).fadeIn('slow');
-	
-				// 10 sekunddan keyin yoʻq boʻlishi
-				setTimeout(function(){
-					cake.fadeOut('slow', function(){
-						$(this).remove();
-					});
-				}, 10000);
-			});
-		});
+
 
 	$('#turn_on').click(function(){
 		$('#bulb_yellow').addClass('bulb-glow-yellow');
